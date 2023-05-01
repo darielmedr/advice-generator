@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/reset.scss';
+@use 'styles/fonts.scss';
+@use 'styles/variables.scss';
+
+body {
+  font-family: Manrope, sans-serif;
+  font-size: variables.$font-size;
+  font-style: normal;
+  font-weight: 800;
+
+  background-color: variables.$color-neutral-dark-blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
