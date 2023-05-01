@@ -11,10 +11,7 @@
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prepare": "husky install",
-    "gh-pages:build": "ng build --configuration production --output-path docs --base-href /advice-generator/",
-    "gh-pages:setup": "cp docs/index.html docs/404.html",
-    "gh-pages:deploy": "npm run gh-pages:build && npm run gh-pages:setup"
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
