@@ -1,22 +1,37 @@
 @use '../../styles/variables';
 
+$button-size: 4rem;
+
 .container {
   background-color: variables.$color-neutral-dark-grayish;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 600px;
+  min-width: 300px;
 
-  padding: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  padding: calc($button-size/2);
   border-radius: 1rem;
 
-  &__main-component {
+  &__divider {
+    background-image: url(../../assets/images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 444px;
+    height: 16px;
+
+    padding-top: 3rem;
     padding-bottom: 3rem;
   }
+
   &__button {
-    width: 4rem;
-    height: 4rem;
-    margin-bottom: -4rem;
+    width: $button-size;
+    height: $button-size;
+    margin-bottom: -$button-size;
 
     background-image: url('~/src/assets/images/icon-dice.svg');
     background-repeat: no-repeat;
@@ -30,5 +45,30 @@
       cursor: pointer;
       box-shadow: 0px 0px 1.5rem 0.25rem variables.$color-primary-neon-green;
     }
+  }
+}
+
+.advice {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1rem;
+  &__id {
+    font-size: 0.825rem;
+    color: variables.$color-primary-neon-green;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__text {
+    font-size: 2rem;
+    color: variables.$color-primary-light-cyan;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container__divider {
+    background-image: url(../../assets/images/pattern-divider-mobile.svg);
+    width: 295px;
   }
 }
