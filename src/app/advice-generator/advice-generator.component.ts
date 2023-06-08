@@ -3,6 +3,7 @@ import { AdviceHandlerService } from './data-access/advice-handler.service';
 import { Subject, takeUntil } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+
 @Component({
   standalone: true,
   selector: 'app-advice-generator',
