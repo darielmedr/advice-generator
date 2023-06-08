@@ -38,7 +38,8 @@
         "@angular-eslint/relative-url-prefix": "error",
         "@angular-eslint/sort-ngmodule-metadata-arrays": "error",
         "@angular-eslint/use-component-selector": "error",
-        "@angular-eslint/use-component-view-encapsulation": "error"
+        "@angular-eslint/use-component-view-encapsulation": "error",
+        "prettier/prettier": ["error", { "endOfLine": "auto" }]
       }
     },
     {
@@ -64,7 +65,10 @@
       "excludedFiles": ["*inline-template-*.component.html"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "prettier/prettier": ["error", { "parser": "angular" }]
+        "prettier/prettier": [
+          "error",
+          { "parser": "angular", "endOfLine": "auto" }
+        ]
       }
     }
   ]

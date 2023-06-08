@@ -1,5 +1,12 @@
 <div class="container">
-  <div class="container__main-component">Advice details</div>
+  <div
+    class="container__main-component advice"
+    *ngIf="currentAdvice$ | async as advice"
+  >
+    <p class="advice__id">Advice # {{ advice.id }}</p>
+    <p class="advice__text">“{{ advice.advice }}”</p>
+  </div>
+  <div class="container__divider" aria-label="divisory-line-image"></div>
   <button
     aria-label="next-advice-button"
     class="container__button"
